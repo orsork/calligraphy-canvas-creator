@@ -2,95 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Tangerine:wght@400;700&family=Alex+Brush&family=Allura&family=Pinyon+Script&family=Sacramento&family=Parisienne&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 40 30% 97%;
+    --foreground: 30 10% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 25% 95%;
+    --card-foreground: 30 10% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 30% 97%;
+    --popover-foreground: 30 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 30 15% 20%;
+    --primary-foreground: 40 30% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 20% 90%;
+    --secondary-foreground: 30 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 15% 92%;
+    --muted-foreground: 30 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 60% 50%;
+    --accent-foreground: 40 30% 97%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 30 15% 20%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    --canvas-bg: 40 30% 98%;
+    --toolbar-bg: 40 25% 96%;
+    --shadow-soft: 0 4px 20px -4px hsl(30 20% 20% / 0.08);
+    --shadow-elevated: 0 8px 30px -6px hsl(30 20% 20% / 0.12);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 25% 96%;
+    --sidebar-foreground: 30 10% 25%;
+    --sidebar-primary: 30 15% 20%;
+    --sidebar-primary-foreground: 40 30% 97%;
+    --sidebar-accent: 35 20% 92%;
+    --sidebar-accent-foreground: 30 15% 20%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 30 15% 20%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 30 15% 8%;
+    --foreground: 40 20% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 12% 12%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 15% 10%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 40 25% 90%;
+    --primary-foreground: 30 15% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 10% 18%;
+    --secondary-foreground: 40 20% 88%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 10% 20%;
+    --muted-foreground: 35 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 25 55% 55%;
+    --accent-foreground: 30 15% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 30 10% 22%;
+    --input: 30 10% 22%;
+    --ring: 40 20% 80%;
+
+    --canvas-bg: 30 12% 10%;
+    --toolbar-bg: 30 10% 14%;
+
+    --sidebar-background: 30 12% 10%;
+    --sidebar-foreground: 40 20% 88%;
+    --sidebar-primary: 40 25% 85%;
+    --sidebar-primary-foreground: 30 15% 10%;
+    --sidebar-accent: 30 10% 16%;
+    --sidebar-accent-foreground: 40 20% 88%;
+    --sidebar-border: 30 10% 20%;
+    --sidebar-ring: 40 20% 80%;
   }
 }
 
@@ -100,6 +100,55 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .canvas-container {
+    @apply bg-canvas rounded-xl shadow-elevated;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .toolbar-panel {
+    @apply bg-toolbar rounded-xl;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .font-calligraphy-great-vibes {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-calligraphy-tangerine {
+    font-family: 'Tangerine', cursive;
+  }
+
+  .font-calligraphy-alex-brush {
+    font-family: 'Alex Brush', cursive;
+  }
+
+  .font-calligraphy-allura {
+    font-family: 'Allura', cursive;
+  }
+
+  .font-calligraphy-pinyon {
+    font-family: 'Pinyon Script', cursive;
+  }
+
+  .font-calligraphy-sacramento {
+    font-family: 'Sacramento', cursive;
+  }
+
+  .font-calligraphy-parisienne {
+    font-family: 'Parisienne', cursive;
+  }
+
+  .font-calligraphy-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-calligraphy-playfair {
+    font-family: 'Playfair Display', serif;
   }
 }
