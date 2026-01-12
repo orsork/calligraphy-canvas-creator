@@ -28,8 +28,9 @@ const CalligraphyCanvas = forwardRef<HTMLDivElement, CalligraphyCanvasProps>(
         >
           <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
             <p
-              className={`${fontOption?.className || 'font-serif'} whitespace-pre-wrap break-words w-full transition-all duration-200`}
+              className="whitespace-pre-wrap break-words w-full transition-all duration-200"
               style={{
+                fontFamily: fontOption ? `'${fontOption.name}', cursive` : 'serif',
                 color: design.textColor,
                 fontSize: `${design.fontSize}px`,
                 textAlign: design.textAlign,
