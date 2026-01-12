@@ -45,6 +45,6 @@ Design, preview, and download your artwork — all without ads, accounts, or dat
 If running locally:
 
 ```bash
-git clone <your-repository-link>
+git clone https://github.com/orsork/calligraphy-canvas-creator/
 cd calligraphy-studio
-# Open index.html in browser
+npm run dev
