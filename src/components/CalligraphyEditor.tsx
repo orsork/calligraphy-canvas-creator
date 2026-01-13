@@ -211,6 +211,13 @@ const CalligraphyEditor = () => {
         </div>
       </main>
 
+      {/* Footer */}
+      <footer className="py-6 text-center border-t border-border bg-toolbar/30">
+        <p className="text-sm text-muted-foreground font-serif">
+          Made with <span className="text-red-500">♥</span> by <span className="font-medium text-foreground">Aditi</span>
+        </p>
+      </footer>
+
       {/* Saved Designs Modal */}
       <SavedDesignsModal
         isOpen={showSavedModal}
