@@ -6,6 +6,7 @@ import CalligraphyCanvas from './CalligraphyCanvas';
 import FontSelector from './FontSelector';
 import ColorPicker from './ColorPicker';
 import TextControls from './TextControls';
+import TextEffects from './TextEffects';
 import ActionBar from './ActionBar';
 import SavedDesignsModal from './SavedDesignsModal';
 import { toast } from 'sonner';
@@ -23,6 +24,18 @@ const DEFAULT_DESIGN: CalligraphyDesign = {
   lineHeight: 1.4,
   createdAt: Date.now(),
   name: '',
+  textShadow: {
+    enabled: false,
+    offsetX: 2,
+    offsetY: 2,
+    blur: 4,
+    color: '#00000080',
+  },
+  textOutline: {
+    enabled: false,
+    width: 1,
+    color: '#000000',
+  },
 };
 
 const CalligraphyEditor = () => {
@@ -189,6 +202,10 @@ const CalligraphyEditor = () => {
                 presets={BACKGROUND_PRESETS}
                 onChange={(backgroundColor) => updateDesign({ backgroundColor })}
               />
+            </div>
+
+            <div className="toolbar-panel p-6 space-y-6">
+              <TextEffects design={design} onChange={updateDesign} />
             </div>
           </motion.aside>
         </div>

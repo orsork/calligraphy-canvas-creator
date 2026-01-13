@@ -36,6 +36,12 @@ const CalligraphyCanvas = forwardRef<HTMLDivElement, CalligraphyCanvasProps>(
                 textAlign: design.textAlign,
                 letterSpacing: `${design.letterSpacing}px`,
                 lineHeight: design.lineHeight,
+                textShadow: design.textShadow?.enabled
+                  ? `${design.textShadow.offsetX}px ${design.textShadow.offsetY}px ${design.textShadow.blur}px ${design.textShadow.color}`
+                  : 'none',
+                WebkitTextStroke: design.textOutline?.enabled
+                  ? `${design.textOutline.width}px ${design.textOutline.color}`
+                  : 'none',
               }}
             >
               {design.text || 'Your beautiful text here...'}
